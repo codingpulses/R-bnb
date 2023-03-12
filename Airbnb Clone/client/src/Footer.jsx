@@ -87,6 +87,7 @@ export default function Footer() {
 }
 
 const FooterSection = styled.footer`
+
   padding: 5rem ;
   width:1320px;
   background: #dcdcdc;
@@ -125,6 +126,7 @@ const FooterSection = styled.footer`
         &:hover {
           opacity: 1;
           text-decoration: underline;
+          color: #F5385D
         }
       }
     }
