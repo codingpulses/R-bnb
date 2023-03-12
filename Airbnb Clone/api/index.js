@@ -40,7 +40,7 @@ mongoose.connect('mongodb+srv://booking:Airbnb@cluster0.upfoxxl.mongodb.net/?ret
     useUnifiedTopology: true,
   }
 );
-mongoose.set('strictQuery', true);
+mongoose.set('strictQuery',true);
 
 
 
