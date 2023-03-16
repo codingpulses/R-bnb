@@ -33,13 +33,7 @@ app.use(function (req, res, next) {
   }
 });
                          
-mongoose.connect('mongodb+srv://booking:Airbnb@cluster0.upfoxxl.mongodb.net/?retryWrites=true&w=majority',
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-);
-mongoose.set('strictQuery',true);
+mongoose.connect(process.env.MONGO_URL)
 
 function getUserDataFromReq(req) {
   return new Promise((resolve, reject) => {
