@@ -32,8 +32,8 @@ app.use(function (req, res, next) {
     next();
   }
 });
-                         
-mongoose.connect(process.env.MONGO_URL)
+mongoose.set('strictQuery', false);
+mongoose.connect('mongodb+srv://booking:Airbnb@cluster0.upfoxxl.mongodb.net/?retryWrites=true&w=majority');
 
 function getUserDataFromReq(req) {
   return new Promise((resolve, reject) => {
