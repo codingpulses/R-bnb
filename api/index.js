@@ -10,7 +10,9 @@ const imageDownloader = require('image-downloader');
 const multer = require('multer');
 const fs = require('fs');
 const app = express();
+const PORT = process.env.PORT || 4000
 require('dotenv').config();
+
 
 const bcryptSalt = bcrypt.genSaltSync(10);
 const jwtSecret = 'fasefraw4r5r3wq45wdfgw34twdfg';
