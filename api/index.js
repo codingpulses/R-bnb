@@ -10,7 +10,6 @@ const imageDownloader = require('image-downloader');
 const multer = require('multer');
 const fs = require('fs');
 const app = express();
-const PORT = process.env.PORT || 4000
 require('dotenv').config();
 
 
