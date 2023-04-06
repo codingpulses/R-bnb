@@ -10,6 +10,8 @@ const imageDownloader = require('image-downloader');
 const multer = require('multer');
 const fs = require('fs');
 const app = express();
+const BASE_URL = process.env.BASE_URL;
+const MONGO_URL = process.env.MONGO_URL; 
 
 
 const bcryptSalt = bcrypt.genSaltSync(10);
