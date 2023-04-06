@@ -10,7 +10,6 @@ const imageDownloader = require('image-downloader');
 const multer = require('multer');
 const fs = require('fs');
 const app = express();
-require('dotenv').config();
 
 
 const bcryptSalt = bcrypt.genSaltSync(10);
@@ -51,7 +50,6 @@ app.get('/test', (req,res) => {
 
 app.post('/register', async (req,res) => {
   const {name,email,password} = req.body;
-
   try {
     const userDoc = await User.create({
       name,
@@ -198,11 +196,9 @@ app.post('/bookings', async (req, res) => {
   });
 });
 
-
-
 app.get('/bookings', async (req,res) => {
   const userData = await getUserDataFromReq(req);
   res.json( await Booking.find({user:userData.id}).populate('place') );
-});
+}); 
 
 app.listen(4000);
